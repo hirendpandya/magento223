@@ -87,7 +87,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic
                 'required' => true,
                 'values' => array(
                 array('value'=>'1','label'=>'Male'),
-                array('value'=>'2','label'=>'Female'),
+                array('value'=>'0','label'=>'Female'),
                 )
             ]
         );

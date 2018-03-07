@@ -124,7 +124,7 @@
                </item>
            </argument>
        </column>
-       <column name="gender">
+       <!-- <column name="gender">
            <settings>
                 <filter>select</filter>
                 <editor>
@@ -134,7 +134,22 @@
                 <label translate="true">Gender</label>
                 <visible>true</visible>
             </settings>
-       </column>
+       </column> -->
+        <column name="gender">
+            <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">Ktpl\Grid\Model\Config\Source\Gender</item>
+                <item name="config" xsi:type="array">                    
+                    <item name="filter" xsi:type="string">select</item>
+                    <item name="bodyTmpl" xsi:type="string">ui/grid/cells/html</item>
+                    <item name="sortable" xsi:type="boolean">true</item>
+                    <item name="dataType" xsi:type="string">select</item>
+                    <item name="sortOrder" xsi:type="number">40</item>
+                    <item name="component" xsi:type="string">Magento_Ui/js/grid/columns/select</item>
+                    <item name="editor" xsi:type="string">select</item>
+                    <item name="label" xsi:type="string" translate="true">Gender</item>
+                </item>
+            </argument>
+        </column>
        <column name="purpose" >
            <argument name="data" xsi:type="array">
                <item name="config" xsi:type="array">

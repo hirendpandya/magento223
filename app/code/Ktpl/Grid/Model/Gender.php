@@ -9,7 +9,7 @@ class Gender implements OptionSourceInterface
      * Get Grid row status type labels array.
      * @return array
      */
-    public function getGenderArray()
+    public function getOptionArray()
     {
         $options = ['1' => __('Male'),'2' => __('Female')];
         return $options;

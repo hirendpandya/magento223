@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Ktpl_Grid::manager" title="Ktpl Booking Manager" module="Ktpl_Grid" sortOrder="50" resource="Ktpl_Grid::manager" />
+        <add id="Ktpl_Grid::add_row" title="Add Booking Details" module="Ktpl_Grid" sortOrder="20" parent="Ktpl_Grid::manager" action="grid/grid" resource="Ktpl_Grid::add_row"/>
+    </menu>
+</config>

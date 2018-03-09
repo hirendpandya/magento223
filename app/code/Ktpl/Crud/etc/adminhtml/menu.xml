@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Krish_Employee" title="Krish Employee" module="Krish_Employee" sortOrder="20" dependsOnModule="Krish_Employee" resource="Krish_Employee::employee"/>
+        <add id="Krish_Employee::index" title="Krish Employee" module="Krish_Employee" action="employee/test/index" parent="Krish_Employee" sortOrder="20" dependsOnModule="Krish_Employee" resource="Krish_Employee::employee"/>
+    </menu>
+</config>

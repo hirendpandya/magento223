@@ -1,0 +1,44 @@
+
+<?php  $_gridrecords = $block->getCollection(); ?>
+
+<?php if ($_gridrecords && count($_gridrecords)): ?>
+    <div class="table-wrapper orders-history">
+        <table class="data table table-order-items history" id="my-orders-table" border="1">
+            <caption class="table-caption"><?php echo __('Grid Record') ?></caption>
+            <thead>
+                <tr>
+                    <th>#ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Gender</th>
+                    <th>Date</th>
+                    <th>Team</th>
+                    <th>City</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                    <?php foreach ($_gridrecords as $_gridrecord): ?>
+                    <tr>
+                        <td><?php echo $_gridrecord->getKrishEmployeeId(); ?></td>
+                        <td><?php echo $_gridrecord->getName(); ?></td>
+                        <td><?php echo $_gridrecord->getEmail(); ?></td>
+                        <td><?php echo $_gridrecord->getAddress(); ?></td>
+                        <td><?php echo ($_gridrecord->getGender()) ? 'Male' : 'Female'; ?></td>
+                        <td><?php echo $_gridrecord->getStartDate(); ?></td>
+                        <td><?php echo $_gridrecord->getTeam(); ?></td>
+                        <td><?php echo $_gridrecord->getCity(); ?></td>
+                        <td><?php echo ($_gridrecord->getStatus()) ? 'Enable' : 'Desable'; ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+    <?php if ($block->getPagerHtml()): ?>
+        <div class="order-products-toolbar toolbar bottom"><?php echo $block->getPagerHtml(); ?></div>
+    <?php endif ?>
+<?php else: ?>
+    <div class="message info empty"><span><?php echo __('grid records not available.'); ?></span></div>
+<?php endif ?>

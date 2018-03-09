@@ -2,8 +2,8 @@
 <form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
     <argument name="data" xsi:type="array">
         <item name="js_config" xsi:type="array">
-            <item name="provider" xsi:type="string">ktpl_grid_form.employee_form_data_source</item>
-            <item name="deps" xsi:type="string">ktpl_grid_form.employee_form_data_source</item>
+            <item name="provider" xsi:type="string">krish_employee_form.employee_form_data_source</item>
+            <item name="deps" xsi:type="string">krish_employee_form.employee_form_data_source</item>
         </item>
         <item name="label" xsi:type="string" translate="true">Form</item>
         <item name="layout" xsi:type="array">
@@ -12,8 +12,6 @@
 
         <item name="buttons" xsi:type="array">
             <item name="back" xsi:type="string">Krish\Employee\Block\Adminhtml\Contact\Edit\BackButton</item>
-            <!-- <item name="delete" xsi:type="string">Krish\Employee\Block\Adminhtml\Contact\Edit\DeleteButton</item>
-            <item name="reset" xsi:type="string">Krish\Employee\Block\Adminhtml\Contact\Edit\ResetButton</item> -->
             <item name="save" xsi:type="string">Krish\Employee\Block\Adminhtml\Contact\Edit\SaveButton</item>
         </item>
     </argument>
@@ -22,7 +20,7 @@
         <argument name="dataProvider" xsi:type="configurableObject">
             <argument name="class" xsi:type="string">Krish\Employee\Model\Contact\DataProvider</argument>
             <argument name="name" xsi:type="string">employee_form_data_source</argument>
-            <argument name="primaryFieldName" xsi:type="string">ktpl_grid_id</argument>
+            <argument name="primaryFieldName" xsi:type="string">krish_employee_id</argument>
             <argument name="requestFieldName" xsi:type="string">id</argument>
         </argument>
         <argument name="data" xsi:type="array">
@@ -39,8 +37,7 @@
             </item>
         </argument>
 
-        <!-- This field represents form id and is hidden -->
-        <field name="ktpl_grid_id">
+        <field name="krish_employee_id">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="visible" xsi:type="boolean">false</item>
@@ -51,7 +48,6 @@
             </argument>
         </field>
 
-        <!-- This field has data type 'text' and standard 'input' form element and looks like input -->
         <field name="name">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
@@ -68,7 +64,6 @@
         </field>
 
 
-        <!-- This field has data type 'text' and standard 'input' form element and looks like input -->
         <field name="email">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
@@ -94,10 +89,6 @@
                      <item name="dataType" xsi:type="string">text</item>
                      <item name="formElement" xsi:type="string">textarea</item>
                      <item name="source" xsi:type="string">address</item>
-                     <!--item name="required" xsi:type="boolean">true</item-->
-                     <!--item name="validation" xsi:type="array">
-                            <item name="required-entry" xsi:type="boolean">true</item>
-                     </item-->                
                  </item>
             </argument>
         </field>
@@ -132,8 +123,6 @@
                     </item>
                     <item name="options" xsi:type="array">
                         <item name="dateFormat" xsi:type="string">yyyy-MM-dd</item>
-                        <!--<item name="timeFormat" xsi:type="string">HH:mm:ss</item>
-                        <item name="showsTime" xsi:type="boolean">true</item>-->
                     </item>
                 </item>
             </argument>
@@ -186,7 +175,6 @@
     <field name="status">
     <argument name="data" xsi:type="array">
         <item name="config" xsi:type="array">
-            <!-- <item name="sortOrder" xsi:type="number">100</item> -->
             <item name="dataType" xsi:type="string">boolean</item>
             <item name="formElement" xsi:type="string">checkbox</item>
             <item name="source" xsi:type="string">category</item>
@@ -194,12 +182,10 @@
             <item name="label" xsi:type="string" translate="true">Status</item>
             <item name="valueMap" xsi:type="array">
                 <item name="true" xsi:type="string">1</item>
-                <!-- <item name="false" xsi:type="string">0</item> -->
             </item>
             <item name="validation" xsi:type="array">
                 <item name="required-entry" xsi:type="boolean">false</item>
             </item>
-            <!-- <item name="default" xsi:type="string">Allowed</item> -->
         </item>
     </argument>
    
@@ -218,13 +204,10 @@
                 <item name="validation" xsi:type="array">
                     <item name="required-entry" xsi:type="boolean">true</item>
                 </item>
-               <!--  <item name="default" xsi:type="string">1</item> -->
+               
             </item>
         </argument>
     </field>
-
-
-<!-- -->
     </fieldset>
 </form>
 
